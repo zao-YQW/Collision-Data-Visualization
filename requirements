@@ -1,0 +1,17 @@
+
+   
+voila
+voila-gridstack
+tornado==5.1.1 
+simplejson
+grpcio==1.30.0
+notebook
+numpy
+pandas
+bqplot
+calmap
+sklearn
+matplotlib
+ipywidgets
+seaborn
+warnings

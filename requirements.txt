@@ -12,6 +12,4 @@ ipywidgets
 seaborn
 sklearn
 bqplot
-warnings
 calmap
-warnings

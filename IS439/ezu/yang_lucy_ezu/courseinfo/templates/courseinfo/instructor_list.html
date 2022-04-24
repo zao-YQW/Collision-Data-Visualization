@@ -1,0 +1,26 @@
+{% extends 'courseinfo/base.html' %}
+
+{% block title %}
+    Instructor List
+{% endblock %}
+
+{% block content %}
+    <h2>Instructor List</h2>
+    {# The following three lines will help us achieve the create new Instructor function #}
+    <div>
+        <a herf="{% url 'courseinfo_instructor_create_urlpattern' %}">Create New Insructor</a>
+    </div>
+    <ul>
+        {#  the instructor_list here is the same as the key in the views return render function's key #}
+        {% for instructor in instructor_list %}
+            <li>
+                {#  display the instructor in the instructor list #}
+                <a href="{{ instructor.get_absolute_url }}">{{ instructor }}</a>
+            </li>
+        {# if the list is empty, print the following test, em is emphsis#}
+        {% empty %}
+            <li><em>There are currently no instructors available.</em></li>
+        {%endfor%}
+    </ul>
+{% endblock %}
+{#When we have the template, we need the url and the view!#}
